@@ -21,7 +21,6 @@ classifiers = [
   "Framework :: Jupyter :: JupyterLab",
   "Framework :: Jupyter :: JupyterLab :: 4",
   "Framework :: Jupyter :: JupyterLab :: Extensions",
-  "Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt",
   "License :: OSI Approved :: BSD License",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3",
@@ -68,11 +67,11 @@ dependencies = [
 [tool.hatch.envs.jupyterlab]
 dependencies = [
   "jupyterlab>=4.0.7,<5",
+  "jupyter-collaboration>=1.2.0,<2",
 ]
 
 [tool.hatch.envs.jupyterlab.scripts]
 start = "jupyter lab"
-develop = "jupyter labextension develop --overwrite ."
 
 [tool.mypy]
 strict = true
