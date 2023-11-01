@@ -22,7 +22,7 @@ jobs:
         run: hatch build
 
       - name: Fix file permissions
-        run: chmod +r "dist/*"
+        run: chmod +r dist/*
 
       - name: Create _site/releases/index.html
         run: |
