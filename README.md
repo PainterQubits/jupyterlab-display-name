@@ -4,7 +4,15 @@ JupyterLab server extension that adds a display name field to the login page.
 
 ## Installation
 
-Coming soon.
+Install the latest version of JupyterLab Display Name using pip:
+
+```
+pip install -U jupyterlab-display-name --extra-index-url https://painterqubits.github.io/jupyterlab-display-name/releases
+```
+
+This extension should run alongside
+[JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html)
+version 4.
 
 ## Development
 
