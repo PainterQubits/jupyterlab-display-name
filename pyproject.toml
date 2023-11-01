@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "jupyterlab-display-names"
+name = "jupyterlab-display-name"
 version = "0.1.0"
 description = "JupyterLab server extension that adds a display name field to the login page."
 authors = [
