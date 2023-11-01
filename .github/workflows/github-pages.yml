@@ -4,8 +4,9 @@ on: workflow_dispatch
 
 env:
   HATCH_VERSION: "1.7.0"
-  PYTHON_VERSION: "3.9"
-  JUPYTERLAB_DISPLAY_NAME_VERSION: "0.1.0"
+  PACKAGE_VERSION: "0.1.0"
+  PACKAGE_NAME: "jupyterlab-display-name"
+  PYTHON_PACKAGE_NAME: "jupyterlab_display_name"
 
 jobs:
   build:
@@ -17,11 +18,6 @@ jobs:
       - name: Install Hatch
         run: pipx install hatch==${{ env.HATCH_VERSION }}
 
-      - name: Set up Python with pip cache
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-
       - name: Build package
         run: hatch build
 
@@ -32,25 +28,27 @@ jobs:
           echo '<!DOCTYPE html>
           <html>
             <body>
-              <a href="jupyterlab-display-name/">jupyterlab-display-name</a>
+              <a href="${{ env.PACKAGE_NAME }}/">${{ env.PACKAGE_NAME }}</a>
             </body>
           </html>' > _site/releases/index.html
 
-      - name: Create _site/releases/jupyterlab-display-name/index.html
+      - name: Create _site/releases/<package-name>/index.html
         run: |
-          mkdir _site/releases/jupyterlab-display-name
+          mkdir _site/releases/${{ env.PACKAGE_NAME }}
           echo '<!DOCTYPE html>
           <html>
             <body>
-              <a href="jupyterlab_display_names-${{ env.JUPYTERLAB_DISPLAY_NAME_VERSION }}-py3-none-any.whl">
-                jupyterlab_display_names-${{ env.JUPYTERLAB_DISPLAY_NAME_VERSION }}-py3-none-any.whl
+              <a href="${{ env.PYTHON_PACKAGE_NAME }}-${{ env.PACKAGE_VERSION }}-py3-none-any.whl">
+                ${{ env.PYTHON_PACKAGE_NAME }}-${{ env.PACKAGE_VERSION }}-py3-none-any.whl
               </a>
-              <a href="jupyterlab_display_names-${{ env.JUPYTERLAB_DISPLAY_NAME_VERSION }}.tar.gz">jupyterlab_display_names-${{ env.JUPYTERLAB_DISPLAY_NAME_VERSION }}.tar.gz</a>
+              <a href="${{ env.PYTHON_PACKAGE_NAME }}-${{ env.PACKAGE_VERSION }}.tar.gz">
+                ${{ env.PYTHON_PACKAGE_NAME }}-${{ env.PACKAGE_VERSION }}.tar.gz
+              </a>
             </body>
-          </html>' > _site/releases/jupyterlab-display-name/index.html
+          </html>' > _site/releases/${{ env.PACKAGE_NAME }}/index.html
 
-      - name: Move package files into _site/releases/jupyterlab-display-name
-        run: mv dist/* _site/releases/jupyterlab-display-name
+      - name: Move package files into _site/releases/<package-name>
+        run: mv dist/* _site/releases/${{ env.PACKAGE_NAME }}
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v2
