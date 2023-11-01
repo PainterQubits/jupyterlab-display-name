@@ -37,5 +37,13 @@ jobs:
       - name: Lint (Pylint)
         run: hatch run pylint ${{ env.PYTHON_PACKAGE_NAME }}
 
+      - name: Mypy cache
+        uses: actions/cache@v3
+        with:
+          path: .mypy_cache
+          key: mypy-${{ runner.os }}-python-${{ env.PYTHON_VERSION }}-${{ github.sha }}
+          restore-keys: |
+            mypy-${{ runner.os }}-python-${{ env.PYTHON_VERSION }}-
+
       - name: Type Check (Mypy)
         run: hatch run mypy ${{ env.PYTHON_PACKAGE_NAME }}
