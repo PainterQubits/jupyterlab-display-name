@@ -7,6 +7,8 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.0] (Nov 1 2023)
+
 ### Added
 
 - JupyterLab server extension to add a display name field to the login page, which is used
