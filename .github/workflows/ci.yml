@@ -28,7 +28,7 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
-      - name: Check Formatting (Black)
+      - name: Check formatting (Black)
         run: hatch run black ${{ env.PYTHON_PACKAGE_NAME }} --check
 
       - name: Lint (Flake8)
@@ -45,5 +45,5 @@ jobs:
           restore-keys: |
             mypy-${{ runner.os }}-python-${{ env.PYTHON_VERSION }}-
 
-      - name: Type Check (Mypy)
+      - name: Type check (Mypy)
         run: hatch run mypy ${{ env.PYTHON_PACKAGE_NAME }}
