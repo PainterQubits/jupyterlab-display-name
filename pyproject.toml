@@ -40,7 +40,6 @@ packages = ["jupyterlab_display_name"]
 dependencies = ["jupyterlab>=4.0.8,<5", "jupyter-collaboration>=1.2.0,<2"]
 
 [tool.hatch.envs.lint]
-detatched = true
 dependencies = [
   "flake8>=6.1.0,<7",
   "pylint>=3.0.2,<4",
