@@ -6,14 +6,10 @@ build-backend = "hatchling.build"
 name = "jupyterlab-display-name"
 version = "0.1.0"
 description = "JupyterLab server extension that adds a display name field to the login page."
-authors = [{name = "Alex Hadley", email = "contact@alexhadley.com"}]
-license = {file = "LICENSE"}
+authors = [{ name = "Alex Hadley", email = "contact@alexhadley.com" }]
+license = { file = "LICENSE" }
 readme = "README.md"
-keywords = [
-  "jupyter",
-  "jupyterlab",
-  "jupyterlab-extension",
-]
+keywords = ["jupyter", "jupyterlab", "jupyterlab-extension"]
 classifiers = [
   "Framework :: Jupyter",
   "Framework :: Jupyter :: JupyterLab",
@@ -25,12 +21,10 @@ classifiers = [
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
-  "Programming Language :: Python :: 3.12"
+  "Programming Language :: Python :: 3.12",
 ]
 requires-python = ">=3.9"
-dependencies = [
-  "jupyter_server>=2.10.0,<3",
-]
+dependencies = ["jupyter_server>=2.10.0,<3"]
 
 [project.urls]
 Homepage = "https://github.com/PainterQubits/jupyterlab-display-name"
@@ -43,24 +37,15 @@ packages = ["jupyterlab_display_name"]
 "jupyter_server_config.json" = "etc/jupyter/jupyter_server_config.d/jupyterlab_display_name.json"
 
 [tool.hatch.envs.default]
-description = "Building and linting"
+dependencies = ["jupyterlab>=4.0.8,<5", "jupyter-collaboration>=1.2.0,<2"]
+
+[tool.hatch.envs.lint]
 dependencies = [
-  "jupyterlab>=4.0.8,<5",
   "flake8>=6.1.0,<7",
   "pylint>=3.0.2,<4",
   "mypy>=1.6.1,<2",
   "black>=23.10.1,<24",
 ]
-
-[tool.hatch.envs.jupyterlab]
-description = "Running JupterLab in development"
-dependencies = [
-  "jupyterlab>=4.0.8,<5",
-  "jupyter-collaboration>=1.2.0,<2",
-]
-
-[tool.hatch.envs.jupyterlab.scripts]
-start = "jupyter lab"
 
 [tool.mypy]
 strict = true

@@ -21,15 +21,10 @@ To develop, the following dependencies must be installed:
 - [Python](https://www.python.org/downloads/)
 - [Hatch](https://hatch.pypa.io/latest/install/)
 
-To run JupyterLab with this extension in development mode, run:
+To run JupyterLab with this extension, run:
 
 ```
-hatch run jupyterlab:start
+hatch run jupyter lab
 ```
 
-If the contents of jupyter_server_config.json changes, the old environment must be removed
-by running:
-
-```
-hatch env remove jupyterlab
-```
+If the server extension code changes, the server will need to be restarted.

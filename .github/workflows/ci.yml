@@ -29,13 +29,13 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Check formatting (Black)
-        run: hatch run black ${{ env.PYTHON_PACKAGE_NAME }} --check
+        run: hatch run lint:black ${{ env.PYTHON_PACKAGE_NAME }} --check
 
       - name: Lint (Flake8)
-        run: hatch run flake8 ${{ env.PYTHON_PACKAGE_NAME }}
+        run: hatch run lint:flake8 ${{ env.PYTHON_PACKAGE_NAME }}
 
       - name: Lint (Pylint)
-        run: hatch run pylint ${{ env.PYTHON_PACKAGE_NAME }}
+        run: hatch run lint:pylint ${{ env.PYTHON_PACKAGE_NAME }}
 
       - name: Mypy cache
         uses: actions/cache@v3
@@ -46,4 +46,4 @@ jobs:
             mypy-${{ runner.os }}-python-${{ env.PYTHON_VERSION }}-
 
       - name: Type check (Mypy)
-        run: hatch run mypy ${{ env.PYTHON_PACKAGE_NAME }}
+        run: hatch run lint:mypy ${{ env.PYTHON_PACKAGE_NAME }}
