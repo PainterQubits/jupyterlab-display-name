@@ -50,10 +50,8 @@ jobs:
             </body>
           </html>' > _site/releases/${{ env.PACKAGE_NAME }}/index.html
 
-      - name: Create _site/latest.tar.gz and _site/latest.whl
-        run: |
-          cp dist/*.tar.gz _site/latest.tar.gz
-          cp dist/*.whl _site/latest.whl
+      - name: Create _site/latest.tar.gz
+        run: cp dist/*.tar.gz _site/latest.tar.gz
 
       - name: Move package files into _site/releases/<package-name>
         run: mv dist/* _site/releases/${{ env.PACKAGE_NAME }}
