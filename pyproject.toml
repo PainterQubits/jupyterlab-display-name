@@ -37,9 +37,11 @@ packages = ["jupyterlab_display_name"]
 "jupyter_server_config.json" = "etc/jupyter/jupyter_server_config.d/jupyterlab_display_name.json"
 
 [tool.hatch.envs.default]
+description = "For running JupyterLab in development"
 dependencies = ["jupyterlab>=4.0.8,<5", "jupyter-collaboration>=1.2.0,<2"]
 
 [tool.hatch.envs.lint]
+description = "For linting and type checking Python"
 dependencies = [
   "flake8>=6.1.0,<7",
   "pylint>=3.0.2,<4",
