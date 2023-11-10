@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "jupyterlab-display-name"
-version = "0.1.1"
+version = "0.1.2"
 description = "JupyterLab server extension that adds a display name field to the login page."
 authors = [{ name = "Alex Hadley", email = "contact@alexhadley.com" }]
 license = { file = "LICENSE" }

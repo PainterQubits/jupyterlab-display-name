@@ -7,6 +7,8 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.2] (Nov 10 2023)
+
 ### Added
 
 - Latest source distribution (latest.tar.gz) added to Pages site.
@@ -24,6 +26,7 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - JupyterLab server extension to add a display name field to the login page, which is used
   as the user's name once logged in.
 
-[unreleased]: https://github.com/PainterQubits/jupyterlab-display-name/compare/v0.1.1...main
+[unreleased]: https://github.com/PainterQubits/jupyterlab-display-name/compare/v0.1.2...main
+[0.1.2]: https://github.com/PainterQubits/jupyterlab-display-name/releases/tag/v0.1.2
 [0.1.1]: https://github.com/PainterQubits/jupyterlab-display-name/releases/tag/v0.1.1
 [0.1.0]: https://github.com/PainterQubits/jupyterlab-display-name/releases/tag/v0.1.0
