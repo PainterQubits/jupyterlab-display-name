@@ -3,9 +3,9 @@
 from __future__ import annotations
 from typing import Any
 import os
+from tornado.web import RequestHandler
 from jupyter_server import DEFAULT_TEMPLATE_PATH_LIST
 from jupyter_server.serverapp import ServerApp
-from jupyter_server.base.handlers import JupyterHandler
 from jupyter_server.auth.identity import PasswordIdentityProvider, User
 
 
@@ -27,7 +27,7 @@ TEMPLATE_PATH = os.path.join(os.path.dirname(__file__), "templates")
 class DisplayNamePasswordIdentityProvider(PasswordIdentityProvider):
     """Password identity provider that also accepts a display name to use."""
 
-    def process_login_form(self, handler: JupyterHandler) -> User | None:
+    def process_login_form(self, handler: RequestHandler) -> User | None:
         user = super().process_login_form(handler)
         display_name = handler.get_argument("display_name", default=None)
         if user is not None and display_name is not None:
