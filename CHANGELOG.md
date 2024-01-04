@@ -9,6 +9,11 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [0.1.3] (Jan 3 2024)
 
+### Added
+
+- Empty frontend plugin so that this extension appears in the extension list within
+  JupyterLab.
+
 ### Changed
 
 - Changed type hint in `DisplayNamePasswordIdentityProvider` to be compatible with newest

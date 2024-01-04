@@ -28,6 +28,19 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Yarn cache
+        uses: actions/cache@v3
+        with:
+          path: .yarn/cache
+          key: yarn-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            yarn-${{ runner.os }}-
+
       - name: Check formatting (Black)
         run: hatch run lint:black ${{ env.PYTHON_PACKAGE_NAME }} --check
 

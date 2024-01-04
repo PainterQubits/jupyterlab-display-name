@@ -1,0 +1,30 @@
+{
+  "name": "jupyterlab-display-name",
+  "version": "0.1.3",
+  "description": "JupyterLab server extension that adds a display name field to the login page.",
+  "contributors": [
+    {
+      "name": "Alex Hadley",
+      "email": "contact@alexhadley.net"
+    }
+  ],
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension"
+  ],
+  "homepage": "https://github.com/PainterQubits/jupyterlab-display-name",
+  "repository": "github:PainterQubits/jupyterlab-display-name",
+  "main": "lib/index.js",
+  "jupyterlab": {
+    "extension": true,
+    "outputDir": "labextension"
+  },
+  "scripts": {
+    "build": "jupyter labextension build ."
+  },
+  "dependencies": {
+    "@jupyterlab/builder": "^4.0.10"
+  }
+}

@@ -6,7 +6,12 @@
 
 # Build
 dist/
+labextension/
 
 # Python
 __pycache__/
 .ipynb_checkpoints/
+
+# Yarn
+node_modules/
+.yarn/
