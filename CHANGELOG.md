@@ -7,6 +7,13 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.3] (Jan 3 2024)
+
+### Changed
+
+- Changed type hint in `DisplayNamePasswordIdentityProvider` to be compatible with newest
+  version of Jupyter Server.
+
 ## [0.1.2] (Nov 10 2023)
 
 ### Added
@@ -26,7 +33,8 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - JupyterLab server extension to add a display name field to the login page, which is used
   as the user's name once logged in.
 
-[unreleased]: https://github.com/PainterQubits/jupyterlab-display-name/compare/v0.1.2...main
+[unreleased]: https://github.com/PainterQubits/jupyterlab-display-name/compare/v0.1.3...main
+[0.1.3]: https://github.com/PainterQubits/jupyterlab-display-name/releases/tag/v0.1.3
 [0.1.2]: https://github.com/PainterQubits/jupyterlab-display-name/releases/tag/v0.1.2
 [0.1.1]: https://github.com/PainterQubits/jupyterlab-display-name/releases/tag/v0.1.1
 [0.1.0]: https://github.com/PainterQubits/jupyterlab-display-name/releases/tag/v0.1.0
