@@ -34,7 +34,7 @@ jobs:
           node-version-file: .nvmrc
 
       - name: Yarn cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: .yarn/cache
           key: yarn-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
@@ -51,7 +51,7 @@ jobs:
         run: hatch run lint:pylint ${{ env.PYTHON_PACKAGE_NAME }}
 
       - name: Mypy cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: .mypy_cache
           key: mypy-${{ runner.os }}-python-${{ env.PYTHON_VERSION }}-${{ github.sha }}
