@@ -24,6 +24,7 @@
   "scripts": {
     "build": "jupyter labextension build ."
   },
+  "packageManager": "yarn@3.5.0",
   "dependencies": {
     "@jupyterlab/builder": "^4.0.10"
   }
