@@ -9,7 +9,7 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [0.2.0] (Aug 26 2024)
 
-- Public release of JupyterLab Display Name
+- Public release of JupyterLab Display Name.
 
 ## [0.1.3] (Jan 3 2024)
 
