@@ -1,6 +1,6 @@
 # JupyterLab Display Name
 
-[![PyPI Latest Release](https://img.shields.io/pypi/v/datalogs)](https://pypi.org/project/jupyterlab-display-name/)
+[![PyPI Latest Release](https://img.shields.io/pypi/v/jupyterlab-display-name)](https://pypi.org/project/jupyterlab-display-name/)
 [![PyPI Python Versions](https://img.shields.io/pypi/pyversions/jupyterlab-display-name)](https://pypi.org/project/jupyterlab-display-name/)
 [![License](https://img.shields.io/pypi/l/jupyterlab-display-name)](https://github.com/PainterQubits/jupyterlab-display-name/blob/main/LICENSE)
 [![CI](https://github.com/PainterQubits/jupyterlab-display-name/actions/workflows/ci.yml/badge.svg)](https://github.com/PainterQubits/jupyterlab-display-name/actions/workflows/ci.yml)
