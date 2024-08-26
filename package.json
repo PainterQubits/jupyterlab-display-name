@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-display-name",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "JupyterLab server extension that adds a display name field to the login page.",
   "contributors": [
     {
