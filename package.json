@@ -26,6 +26,6 @@
   },
   "packageManager": "yarn@3.5.0",
   "dependencies": {
-    "@jupyterlab/builder": "^4.2.4"
+    "@jupyterlab/builder": "^4.2.5"
   }
 }
